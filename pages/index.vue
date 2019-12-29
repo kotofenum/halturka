@@ -100,12 +100,13 @@
       </content-slide>
       <progress-svg class="progress-svg" />
     </page-content>
+    <main-footer />
   </div>
 </template>
 
 <script>
-import MainHeader from '~/components/MainHeader'
-
+import MainHeader from '~/components/layout/MainHeader'
+import MainFooter from '~/components/layout/MainFooter'
 import PageContent from '~/components/layout/PageContent'
 
 import ContentSlide from '~/components/ContentSlide'
@@ -125,6 +126,7 @@ import ProgressSvg from '~/components/graphic/Progress'
 export default {
   components: {
     MainHeader,
+    MainFooter,
     PageContent,
     ContentSlide,
     SeparatorSlide,

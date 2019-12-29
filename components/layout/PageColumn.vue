@@ -9,6 +9,6 @@
   display: flex;
   flex-direction: column;
   width: calc(50% - 10px);
-  color: $gray;
+  color: $darkGray;
 }
 </style>

@@ -39,7 +39,7 @@ export default {
   outline: none;
 
   &:hover {
-    opacity: 0.8;
+    opacity: $hoverOpacity;
   }
 
   &--primary {

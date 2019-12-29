@@ -1,8 +1,10 @@
 <template>
-  <page-content class="main-header">
-    <logo />
-    <button-input class="login-button">Войти</button-input>
-  </page-content>
+  <div class="main-header">
+    <page-content class="content">
+      <router-link to="/"><logo /></router-link>
+      <button-input class="login-button">Войти</button-input>
+    </page-content>
+  </div>
 </template>
 
 <script>
@@ -21,11 +23,13 @@ export default {
 
 <style lang="scss" scoped>
 .main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px 0;
-  width: 100%;
+  padding: 22px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .login-button {
     min-width: 115px;
