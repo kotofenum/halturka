@@ -24,7 +24,7 @@ export default {
   box-sizing: border-box;
   border-radius: 10px;
   padding: 0 8px;
-  min-width: 255px;
+  min-width: 115px;
   height: 50px;
   background: $white;
   transition: $duration opacity;

@@ -50,11 +50,13 @@ export default {
 
   .content {
     display: flex;
+    justify-content: space-between;
 
     .wrapper {
       display: flex;
       justify-content: space-between;
-      width: calc(50% - 10px); // TODO: вынести в глобальные стили
+      flex: 1;
+      width: $halfScreenCalc;
 
       .info {
         display: flex;

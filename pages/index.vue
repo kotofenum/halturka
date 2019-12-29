@@ -47,7 +47,7 @@
             <button-input primary>Уже хочу начать!</button-input>
           </template>
         </info-block>
-        <slider-card slot="slider" />
+        <slider slot="slider" />
       </content-slide>
     </page-content>
     <separator-slide :type="2"
@@ -70,7 +70,7 @@
             <button-input primary>Начинаем прямо сейчас!</button-input>
           </template>
         </info-block>
-        <slider-card slot="slider" />
+        <slider slot="slider" last-three />
       </content-slide>
     </page-content>
     <page-content>
@@ -118,7 +118,7 @@ import ButtonInput from '~/components/input/ButtonInput'
 
 import InfoBlock from '~/components/InfoBlock'
 
-import SliderCard from '~/components/SliderCard'
+import Slider from '~/components/Slider'
 
 import MainSvg from '~/components/graphic/Main'
 import ProgressSvg from '~/components/graphic/Progress'
@@ -133,7 +133,7 @@ export default {
     BrandText,
     ButtonInput,
     InfoBlock,
-    SliderCard,
+    Slider,
     MainSvg,
     ProgressSvg
   }

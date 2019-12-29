@@ -27,5 +27,9 @@ export default {
   &--reversed {
     flex-direction: row-reverse;
   }
+
+  > * {
+    width: $halfScreenCalc;
+  }
 }
 </style>

@@ -32,7 +32,6 @@ export default {
   }
 
   .login-button {
-    min-width: 115px;
     height: 40px;
   }
 }

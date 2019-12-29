@@ -34,8 +34,9 @@ export default {
     margin-bottom: 66px;
   }
   .actions {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
   }
 }
 </style>
