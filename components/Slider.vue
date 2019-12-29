@@ -5,9 +5,12 @@
         <slider-card
           v-for="(slide, idx) in slides"
           :key="idx"
+          :icon="slide.icon"
+          :description="slide.description"
           class="swiper-slide"
         >
           <template slot="step">{{ slide.step }}</template>
+          <template slot="title">{{ slide.title }}</template>
         </slider-card>
       </div>
     </div>

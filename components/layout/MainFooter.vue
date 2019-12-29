@@ -55,8 +55,8 @@ export default {
     .wrapper {
       display: flex;
       justify-content: space-between;
-      flex: 1;
       width: $halfScreenCalc;
+      flex: 1;
 
       .info {
         display: flex;

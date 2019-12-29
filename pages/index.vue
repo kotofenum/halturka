@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <overlay />
     <main-header />
     <page-content>
       <content-slide>

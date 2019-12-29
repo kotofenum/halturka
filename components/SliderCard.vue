@@ -2,12 +2,19 @@
   <div class="slider-card">
     <div class="heading">
       <span class="step"><slot name="step"/></span>
-      <span class="title">Пополни баланс</span>
+      <span class="title"><slot name="title"/></span>
     </div>
-    <div class="icon" />
+    <div class="icon">
+      <!-- https://github.com/nuxt/eslint-plugin-nuxt/issues/65 -->
+      <!-- eslint-disable-next-line vue/require-component-is -->
+      <component :is="icon" />
+    </div>
     <regular-text>
-      <p>Для доступа к системе необходимо положить деньги на свой счет.</p>
-      <p>Не волнуйся, это не значит, что ты больше их не увидишь!</p>
+      <p
+        v-html="paragraph"
+        v-for="(paragraph, idx) in description"
+        :key="idx"
+      />
     </regular-text>
   </div>
 </template>
@@ -15,12 +22,24 @@
 <script>
 import RegularText from '~/components/typeface/RegularText'
 
-// import Arrow from '~/components/graphic/Arrow'
+import * as slides from '~/components/graphic/slides'
 
 export default {
   components: {
-    RegularText
-    // Arrow
+    RegularText,
+    ...slides
+  },
+
+  props: {
+    icon: {
+      type: String,
+      required: true
+    },
+
+    description: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>
@@ -63,7 +82,6 @@ export default {
     justify-content: center;
     height: 235px;
     margin: 20px 0;
-    background: lightgoldenrodyellow;
   }
 }
 </style>
