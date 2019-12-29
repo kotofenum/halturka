@@ -1,7 +1,9 @@
 <template>
   <div class="app">
-    <overlay />
-    <main-header />
+    <transition name="fade">
+      <overlay v-if="showOverlay" @closeClicked="showOverlay = false" />
+    </transition>
+    <main-header @loginClicked="showOverlay = true" />
     <page-content>
       <content-slide>
         <info-block slot="info">
@@ -106,6 +108,7 @@
 </template>
 
 <script>
+import Overlay from '~/components/layout/Overlay'
 import MainHeader from '~/components/layout/MainHeader'
 import MainFooter from '~/components/layout/MainFooter'
 import PageContent from '~/components/layout/PageContent'
@@ -126,6 +129,7 @@ import ProgressSvg from '~/components/graphic/Progress'
 
 export default {
   components: {
+    Overlay,
     MainHeader,
     MainFooter,
     PageContent,
@@ -137,6 +141,12 @@ export default {
     Slider,
     MainSvg,
     ProgressSvg
+  },
+
+  data() {
+    return {
+      showOverlay: false
+    }
   }
 }
 </script>
@@ -163,5 +173,14 @@ export default {
     top: 100px;
     z-index: -1;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: $duration opacity;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

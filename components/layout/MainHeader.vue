@@ -2,7 +2,11 @@
   <div class="main-header">
     <page-content class="content">
       <router-link to="/"><logo /></router-link>
-      <button-input class="login-button">Войти</button-input>
+      <button-input
+        @click.native.stop="$emit('loginClicked')"
+        class="login-button"
+        >Войти</button-input
+      >
     </page-content>
   </div>
 </template>
